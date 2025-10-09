@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Information Technology Web Site</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url("./images/sky.jpeg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    /* Header */
+    table.header {
+      width: 100%;
+      background-color: #000;
+      color: white;
+      text-align: center;
+    }
+
+    table.header td {
+      padding: 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    table.header td:hover {
+      background-color: #333;
+    }
+
+    /* Banner */
+    .banner {
+      background-image: url("./images/banner.jpeg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 120px;
+    }
+
+    /* Main Layout */
+    table.main {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+    }
+
+    .section {
+      vertical-align: top;
+      padding: 10px;
+      border: 1px solid #000;
+    }
+
+    h3 {
+      background-color: black;
+      color: white;
+      padding: 5px;
+      margin: 0;
+    }
+
+    h4 {
+      margin-top: 10px;
+    }
+
+    .criteria {
+      font-size: 13px;
+    }
+
+    /* Middle column sections */
+    .middle-sections {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+
+    .middle-box {
+      vertical-align: top;
+      padding: 10px;
+      border: 1px solid #aaa;
+    }
+
+
+    .middle-box.bg {
+      background-size: cover;
+      background-position: center;
+      color: black;
+    }
+
+    .mark-input input {
+      margin: 3px 0;
+      width: 90%;
+      padding: 3px;
+    }
+
+    .btns button {
+      margin: 5px;
+      padding: 5px 10px;
+      background-color: #bde0fe;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btns button:hover {
+      background-color: #70e000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <table class="header">
+    <tr>
+      <td><img src="./images/logo.jpeg" height="60"></td>
+      <td>HOME</td>
+      <td>APPLICATION</td>
+      <td>STUDENTS</td>
+      <td>MARKS</td>
+      <td>ACADEMICS</td>
+    </tr>
+  </table>
+
+  <!-- Banner -->
+  <div class="banner"></div>
+
+  <!-- Main Section -->
+  <table class="main">
+    <tr>
+      <!-- Left Column -->
+      <td class="section" width="25%">
+        <h3>About AUCA</h3>
+        <p>
+          The Adventist University of Central Africa (AUCA) known as MUDENDE is a Seventh-day Adventist Institution of Higher Learning which has a philosophy to operate on the basis of the Seventh-day Adventist worldview: "God is the Creator and Sustainer of the universe and the source of true knowledge."
+        </p>
+        <img src="./images/bible.jpeg" width="100%">
+        <h4 style="background-color:#001F54; color:white; padding:5px;">AUCA: A Modern-Day Calling, Rooted in Israel’s Mission</h4>
+        <p>
+          From the very beginning, God called Israel to be a light to the nations—a people set apart to reveal His character, uphold His truth, and serve as a blessing to the world. Adventist University of Central Africa (AUCA) carries that same divine calling today.
+        </p>
+      </td>
+
+      <!-- Middle Column -->
+      <td class="section" width="15%">
+        <div class="middle-sections bg" >
+
+          <!-- Box 1 -->
+          <div class="middle-box">
+            <h3>Description of IT Faculty</h3>
+            <p>
+              The Faculty of Information Technology is the unique Faculty in the School of Sciences at AUCA, which is comprised of several Engineering and Sciences Departments.
+            </p>
+            <p>
+              The programs are designed to provide hands-on skills training, and they focus on the technology of design, construction, implementation, and maintenance of the hardware and software components of modern systems and computer-controlled equipment.
+            </p>
+          </div>
+
+          <!-- Box 2 -->
+          <div class="middle-box">
+            <h3>Departments in AUCA</h3>
+            <ul>
+              <li>Software Engineering</li>
+              <li>Networking</li>
+              <li>Information Technology</li>
+            </ul>
+          </div>
+        </td>
+
+          <!-- Box 3 -->
+          <td class="middle-box" width="20%">
+          <div class="middle-box">
+            <h3>Calculate Students Marks</h3>
+            <form class="mark-input">
+              STUDENT-NAMES: <input type="text"><br>
+              STUDENT-ID: <input type="text"><br>
+              DEPARTMENT: <input type="text"><br>
+              COURSE-WORK/30: <input type="number"><br>
+              MID-TERM/30: <input type="number"><br>
+              FINAL-EXAM/40: <input type="number"><br>
+              <div class="btns">
+                <button type="button">TOTAL</button>
+                <button type="button">AVERAGE</button>
+                <button type="button">GRADE</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Box 4 -->
+          <div class="middle-box">
+            <h3>Grading Criteria</h3>
+            <p class="criteria">
+              • Marks between 70 and 100 → “A”<br>
+              • Marks between 60 and 69.9 → “B”<br>
+              • Marks between 50 and 59.9 → “C”<br>
+              • Marks below 50 → “Failed”
+            </p>
+          </div>
+
+        </div>
+      </td>
+
+      <!-- Right Column -->
+      <td class="section" width="30%">
+        <h3>Adventist University of Central Africa</h3>
+        <p>
+          The Adventist University of Central Africa is pleased to announce the March 2025 Intake for undergraduate and master’s programmes, at all of its campuses (Masoro, Gishushu, and Ngoma Nursing campus).
+        </p>
+        <img src="./images/auca.jpeg" width="100%">
+        <h3>Professional Courses:</h3>
+        <p>
+          Certified Ethical Hacker (CEH), Postgraduate Diploma in Teaching Methodology, Diploma in Theology, Cisco Certified Network Associate, Certified Public Accountants (CPA), Early Childhood Education, English Language Proficiency, Research and Statistics, SPSS.
+        </p>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
