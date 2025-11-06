@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AUCA - Information Technology</title>
+</head>
+<body style="margin:10px; font-family: Arial, Helvetica, sans-serif; background-image: url('./images/sky.jpeg'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+
+  <!-- HEADER -->
+  <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+    
+
+    <!-- NAV -->
+    <tr>
+      <td style="background:#000; color:#fff;">
+        <table width="100%" cellpadding="8" cellspacing="0">
+          <tr style="font-weight:bold; text-align:center;">
+            <td><img src="./images/logo.jpeg" alt="logo" style="height: 50px;"></td>
+            <td>HOME</td>
+            <td>APPLICATION</td>
+            <td>STUDENTS</td>
+            <td>MARKS</td>
+            <td>ACADEMICS</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- BANNER -->
+    <tr>
+      <td style="
+        background-image: url('./images/banner.jpeg');
+        background-size: cover;
+        background-position: center;
+        height: 100px;
+        text-align: center;
+        border-radius: 20px;
+        margin-top: 10px;
+      ">
+      </td>
+    </tr>
+  </table>
+
+  <!-- MAIN 4-COLUMN CONTENT -->
+  <table width="100%"  style="border-collapse:collapse; margin-top: 20px;">
+    <tr valign="top">
+
+      <!-- COLUMN 1: About AUCA -->
+      <td width="25%" style="border:2px solid #000; background:#fff; box-sizing:border-box;">
+        <h2 style="background:#000; color:#fff; padding:8px; border-radius:12px; margin:0 0 10px 0;">
+          About AUCA
+        </h2>
+        <p style="font-size:13px; line-height:1.3; margin:8px 0;">
+          The Adventist University of Central Africa (AUCA), known as MUDENDE, is a Seventh-day Adventist Institution of Higher Learning which operates based on the philosophy that:
+          <strong>“God is the Creator and Sustainer of the universe and the source of true knowledge.”</strong>
+        </p>
+        <img src="./images/bible.jpeg" alt="bible" style="width:100%; display:block; border:1px solid #ccc; margin:8px 0;">
+        <div style="background:#0033cc; color:#fff; padding:8px; border-radius:12px; text-align:center; margin-top:6px;">
+          AUCA: A Modern-Day Calling, Rooted in Israel’s Mission
+        </div>
+        <p style="font-size:13px; margin-top:8px;">
+          From the very beginning, God called Israel to be a light to the nations—a people set apart to reveal His character, uphold His truth, and serve as a blessing to the world. AUCA carries that same divine calling today.
+        </p>
+      </td>
+
+      <!-- COLUMN 2: IT Faculty Description -->
+      <td width="25%" style="border:2px solid #000; background-image:url('./images/campus.jpeg'); background-size:cover; background-position:center; box-sizing:border-box;">
+        <div style="background:rgba(255,255,255,0.95); padding:12px; margin:6px; min-height:340px;">
+          <h3 style="margin-top:0;">Description of IT Faculty</h3>
+          <p style="font-size:13px; line-height:1.35;">
+            The Faculty of Information Technology is a key part of AUCA’s School of Sciences, comprising multiple Engineering and Technology departments.
+          </p>
+          <p style="font-size:13px; line-height:1.35;">
+            Programs are designed to provide hands-on training in technology, design, and system implementation — preparing students for careers in modern computing and engineering environments.
+          </p>
+          <h4>Departments in AUCA:</h4>
+          <ul style="font-size:13px; margin-top:0;">
+            <li>Software Engineering</li>
+            <li>Networking</li>
+            <li>Information Technology</li>
+          </ul>
+        </div>
+      </td>
+
+      <!-- COLUMN 3: Marks Calculation -->
+      <td width="25%" style="border:2px solid #000; background:#fff; box-sizing:border-box; padding:10px;">
+        <h3 style="background:#000; color:#fff; padding:8px; border-radius:10px; margin:0 0 10px 0;">
+          CALCULATE STUDENTS MARKS:
+        </h3>
+
+        <form id="marksForm" onsubmit="return false;" style="font-size:13px;">
+          <div style="margin:6px 0;">
+            <label style="display:block; font-weight:bold;">STUDENT-NAMES:</label>
+            <input id="name" type="text" style="width:80%; padding:4px;">
+          </div>
+          <div style="margin:6px 0;">
+            <label style="display:block; font-weight:bold;">STUDENT-ID:</label>
+            <input id="studentId" type="text" style="width:80%; padding:4px;">
+          </div>
+          <div style="margin:6px 0;">
+            <label style="display:block; font-weight:bold;">DEPARTMENT:</label>
+            <input id="dept" type="text" style="width:80%; padding:4px;">
+          </div>
+
+          <div style="margin:6px 0;">
+            <label style="display:block; font-weight:bold;">COURSE-WORKS / 30:</label>
+            <input id="coursework" type="number" min="0" max="30" value="" style="width:40%; padding:4px;">
+          </div>
+          <div style="margin:6px 0;">
+            <label style="display:block; font-weight:bold;">MID-TERM / 30:</label>
+            <input id="midterm" type="number" min="0" max="30" value="" style="width:40%; padding:4px;">
+          </div>
+          <div style="margin:6px 0 12px 0;">
+            <label style="display:block; font-weight:bold;">FINAL-EXAM / 40:</label>
+            <input id="finalexam" type="number" min="0" max="40" value="" style="width:40%; padding:4px;">
+          </div>
+
+          <div style="margin:6px 0;">
+            <button type="button" onclick="calculateTotal()">TOTAL</button>
+            <button type="button" onclick="calculateAverage()">AVERAGE</button>
+            <button type="button" onclick="calculateGrade()">GRADE</button>
+          </div>
+        </form>
+
+        <div style="display:flex; gap:8px; margin-top:12px; align-items:center;">
+          <div style="flex:1; text-align:center;">
+            <input id="totalOut" type="number" readonly style="width:80%; padding:6px; border:1px solid #000; text-align:center;">
+          </div>
+          <div style="flex:1; text-align:center;">
+            <input id="avgOut" type="text" readonly style="width:80%; padding:6px; border:1px solid #000; text-align:center;">
+          </div>
+          <div style="flex:1; text-align:center;">
+            <input id="gradeOut" type="text" readonly style="width:80%; padding:6px; border:1px solid #000; text-align:center;">
+          </div>
+        </div>
+
+        <div style="font-size:13px; margin-top:12px;">
+          <p style="margin:4px 0;"><strong>Grade Criteria:</strong></p>
+          <ul style="margin:4px 18px; line-height:1.25;">
+            <li>70–100: <strong>A</strong></li>
+            <li>60–69: <strong>B</strong></li>
+            <li>50–59: <strong>C</strong></li>
+            <li>Below 50: <strong>Failed</strong></li>
+          </ul>
+        </div>
+      </td>
+
+      <!-- COLUMN 4: Professional Courses -->
+      <td width="25%" style="border:2px solid #000; padding:10px; box-sizing:border-box; vertical-align:top; background-color: white;">
+        <h4 style="background:#000; color:#fff; padding:8px; border-radius:12px; margin:0 0 10px 0;">
+          Adventist University of Central Africa
+        </h4>
+        <p style="font-size:13px; line-height:1.3; margin:8px 0;">
+          The Adventist University of Central Africa is pleased to annonce the March, 2025 intake for undergratuduate and masters's programmes, at all ot its campuses (Massoro, Gishusu, and Ngoma Nursing campus).
+        </p>
+        <img src="./images/auca.jpeg" alt="building" style="width:100%; display:block; margin-top:10px; border:1px solid #ccc;">
+        <h3 style="background:#0033cc; color:#fff; padding:8px; border-radius:10px; margin:0 0 8px 0;">Professional Courses</h3>
+        <p style="font-size:13px; line-height:1.4;">
+          Certified Ethical Hacker (CEH), Postgraduate Diploma in Teaching Methodology, Diploma in Theology, Certified Public Accountants (CPA), Coaching, Early Childhood Education, English Language Proficiency, Research and Statistics, SPSS.
+        </p>
+      </td>
+
+    </tr>
+  </table>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
